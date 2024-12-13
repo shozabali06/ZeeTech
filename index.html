@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZeeTech</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="input.css" />
+  </head>
+  <body class="bg-[#120e18]">
+    <nav
+      class="bg-[#100C14] abso md:fixed top-0 w-full shadow-2xl shadow-purple-400 z-10"
+    >
+      <div
+        class="flex justify-between items-center container mx-auto w-full p-4"
+      >
+        <img class="w-32" src="../assets/logo.png" alt="logo" />
+        <ul class="hidden md:flex gap-8 font-roboto text-md text-gray-500">
+          <a class="hover:text-white" href="#Home">Home</a>
+          <a class="hover:text-white" href="#Products">Products</a>
+          <a class="hover:text-white" href="#Blog">Blog</a>
+          <a class="hover:text-white" href="#About">About</a>
+          <a class="hover:text-white" href="#Contact">Contact</a>
+        </ul>
+        <div class="flex gap-4">
+          <img
+            class="cursor-pointer"
+            src="../assets/profile.png"
+            alt="profile"
+          />
+          <img class="cursor-pointer" src="../assets/cart.png" alt="cart" />
+          <img
+            class="cursor-pointer md:hidden block"
+            id="menu"
+            src="../assets/menu.svg"
+            alt="menu"
+            onclick="showMenu()"
+          />
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mob-nav" class="hidden fixed w-full right-0 top-0 bottom-0 overflow-hidden bg-white transition-all`">
+        <div class="flex justify-end p-6">
+          <img id="cross" src="../assets/cross.svg" alt="cross" onclick="hideMenu()" />
+        </div>
+
+        <ul class="flex flex-col items-center justify-center text-lg font-semibold gap-5">
+          <a onclick="hideMenu()"   href="#Home">Home</a>
+          <a onclick="hideMenu()"   href="#Products">Products</a>
+          <a onclick="hideMenu()"   href="#Blog">Blog</a>
+          <a onclick="hideMenu()"   href="#About">About</a>
+          <a onclick="hideMenu()"   href="#Contact">Contact</a>
+        </ul>
+      </div>
+    </nav>
+    <!-- Home -->
+    <section
+      class="w-full flex flex-col md:flex-row justify-center md:justify-between px-5 md:px-20 pt-10 text-white items-center min-h-screen mt-24 md:mt-0"
+    >
+      <div>
+        <h1 class="font-mont font-bold text-3xl md:text-4xl mb-6">
+          Discover the Future of <br /><span class="text-5xl md:text-6xl"
+            >Luxury</span
+          >
+        </h1>
+        <p class="font-raleway text-sm mb-6 max-w-lg">
+          At ZeeTech, we bring you the finest selection of high-end gadgets and
+          luxurious accessories, designed to elevate your lifestyle. From
+          cutting-edge tech innovations to exquisite designer pieces, our
+          curated collection ensures that you experience the perfect blend of
+          style and sophistication. Explore our exclusive range and embrace the
+          future of luxury with ZeeTech.
+        </p>
+        <button
+          class="bg-[hsl(260,70%,62%)] hover:bg-[hsl(260,70%,42%)] transition-colors duration-200 px-4 py-2 rounded-md text-md"
+        >
+          View all
+        </button>
+      </div>
+      <div>
+        <img class="w-full drop-filter" src="../assets/bag.png" alt="bag" />
+      </div>
+    </section>
+    <!-- second -->
+    <section
+      class="w-full flex flex-col md:flex-row justify-center md:justify-between min-h-screen px-5 md:px-20 md:pt-10 text-white items-center"
+    >
+      <div>
+        <h1 class="text-4xl md:text-6xl font-mont font-bold mb-6">
+          Capture the sky <br />
+          <span class="font-normal text-xl md:text-3xl"
+            >High-Quality Drone with 4K Camera</span
+          >
+        </h1>
+        <p class="max-w-xl mb-6">
+          Experience unparalleled aerial photography with our high-quality
+          drone, equipped with a 4K camera for stunningly clear and vibrant
+          images. Perfect for both professionals and enthusiasts, this drone
+          lets you capture every moment from a breathtaking perspective.
+        </p>
+        <button
+          class="bg-[hsl(260,70%,62%)] hover:bg-[hsl(260,70%,42%)] transition-colors duration-200 px-4 py-2 rounded-md text-md"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div class="w-72 md:w-2/5 mt-16 md:mt-0">
+        <img class="w-full drop-filter" src="../assets/drone.png" alt="drone" />
+      </div>
+    </section>
+    <!-- third -->
+    <section
+      class="w-full flex flex-col-reverse md:flex-row justify-center md:justify-between min-h-screen px-5 md:px-20 pt-10 text-white items-center"
+    >
+      <div class="w-72 md:w-2/5 mt-16 md:mt-0">
+        <img class="w-full drop-filter" src="../assets/smartwatch.png" alt="watch" />
+      </div>
+      <div>
+        <h1 class="text-4xl md:text-6xl font-mont font-bold mb-6">
+          Stay Connected <br />
+          <span class="font-normal text-xl md:text-3xl"
+            >Sleek Smartwatch with Advanced Features</span
+          >
+        </h1>
+        <p class="max-w-xl mb-6">
+          Stay ahead of the curve with our cutting-edge smartwatch, designed to
+          keep you connected and in control. With advanced health tracking,
+          seamless notifications, and a stylish design, it's the perfect blend
+          of functionality and fashion.
+        </p>
+        <button
+          class="bg-[hsl(260,70%,62%)] hover:bg-[hsl(260,70%,42%)] transition-colors duration-200 px-4 py-2 rounded-md text-md"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </section>
+    <!-- fourth -->
+    <section
+      class="w-full flex flex-col md:flex-row justify-center md:justify-between min-h-screen px-5 md:px-20 pt-10 text-white items-center"
+    >
+      <div>
+        <h1 class="text-4xl md:text-6xl font-mont font-bold mb-6">
+          Immersive Sound <br />
+          <span class="font-normal text-3xl">Premium Wireless Headphones</span>
+        </h1>
+        <p class="max-w-xl mb-6">
+          Elevate your listening experience with our premium wireless
+          headphones, delivering rich, immersive sound with every beat. Designed
+          for comfort and clarity, these headphones are perfect for music lovers
+          and audiophiles alike.
+        </p>
+        <button
+          class="bg-[hsl(260,70%,62%)] hover:bg-[hsl(260,70%,42%)] transition-colors duration-200 px-4 py-2 rounded-md text-md"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div class="w-72 md:w-2/5 mt-16 md:mt-0">
+        <img class="w-full drop-filter" src="../assets/headphones.png" alt="headphones" />
+      </div>
+    </section>
+    <!-- fifth -->
+    <section
+      class="w-full flex flex-col md:flex-row-reverse justify-center md:justify-between min-h-screen px-5 md:px-20 pt-10 text-white items-center"
+    >
+      <div>
+        <h1 class="text-4xl md:text-6xl font-mont font-bold mb-6 max-w-96">
+          Level Up <br />
+          <span class="font-normal text-3xl "
+            >High-Performance Gaming Console for Epic Adventures</span
+          >
+        </h1>
+        <p class="max-w-xl mb-6">
+          Dive into a world of endless entertainment with our next-gen gaming
+          console, built for speed, power, and stunning graphics. Whether you're
+          a casual gamer or a hardcore enthusiast, this console delivers an
+          unmatched gaming experience.
+        </p>
+        <button
+          class="bg-[hsl(260,70%,62%)] hover:bg-[hsl(260,70%,42%)] transition-colors duration-200 px-4 py-2 rounded-md text-md"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div class="w-72 md:w-2/5 mt-16 md:mt-0">
+        <img class="w-full drop-filter" src="../assets/controller.png" alt="headphones" />
+      </div>
+    </section>
+    <!-- vr -->
+    <section
+      class="w-full flex flex-col md:flex-row justify-center md:justify-between min-h-screen px-5 md:px-20 pt-10 text-white items-center"
+    >
+      <div>
+        <h1 class="text-4xl md:text-6xl font-mont font-bold mb-6">
+          Step into the Future <br />
+          <span class="font-normal text-3xl"
+            >Immersive VR Headset for Realistic Experiences</span
+          >
+        </h1>
+        <p class="max-w-xl mb-6">
+          Transform your reality with our state-of-the-art VR headset, offering
+          an immersive experience that brings virtual worlds to life. Whether
+          for gaming, exploring, or learning, this headset delivers unparalleled
+          realism and depth.
+        </p>
+        <button
+          class="bg-[hsl(260,70%,62%)] hover:bg-[hsl(260,70%,42%)] transition-colors duration-200 px-4 py-2 rounded-md text-md"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div class="w-72 md:w-2/5 mt-16 md:mt-0">
+        <img class="w-full drop-filter" src="../assets/vr.png" alt="vr" />
+      </div>
+    </section>
+    <section class="w-full my-10">
+      <img
+        class="mx-auto w-72 md:w-96"
+        src="../assets/girl_vr.png"
+        alt="vr_girl"
+      />
+    </section>
+    <!-- reviews -->
+    <section class="container text-center mx-auto w-full text-white mb-10">
+      <h2 class="font-mont font-bold text-3xl mb-10">
+        Valued Customer's Reviews
+      </h2>
+      <div class="w-full grid grid-rows-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="p-8 text-left bg-glass max-w-96 mx-auto md:mx-0">
+          <div class="flex items-center justify- w-full text-center mb-3">
+            <img src="../assets/p1.png" alt="p1" />
+            <h3 class="text-xl ml-14 font-semibold">John Smith</h3>
+          </div>
+          <div class="flex gap-5 mb-4">
+            <div class="flex gap-3 items-center">
+              <span class="flex">
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+              </span>
+              <p>5.0</p>
+            </div>
+            <span
+              class="flex gap-1 items-center border border-white rounded-full p-0.5 px-1 bg-[#A1FFB6]"
+            >
+              <img
+                class="w-5"
+                src="../assets/bxs-check-circle.svg"
+                alt="check"
+              />
+              <p class="text-xs text-green-600">VERIFIED</p>
+            </span>
+          </div>
+          <div>
+            I've been using this smartwatch for a few weeks now, and it has
+            exceeded all my expectations. The design is sleek and modern, making
+            it a perfect accessory for any outfit. But it’s not just about
+            looks—the functionality is top-notch.
+          </div>
+        </div>
+        <div class="p-8 text-left bg-glass max-w-96 mx-auto md:mx-0">
+          <div class="flex items-center justify- w-full text-center mb-3">
+            <img src="../assets/p2.png" alt="p2" />
+            <h3 class="text-xl ml-14 font-semibold">Emily Davis</h3>
+          </div>
+          <div class="flex gap-5 mb-4">
+            <div class="flex gap-3 items-center">
+              <span class="flex">
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+              </span>
+              <p>5.0</p>
+            </div>
+            <span
+              class="flex gap-1 items-center border border-white rounded-full p-0.5 px-1 bg-[#A1FFB6]"
+            >
+              <img
+                class="w-5"
+                src="../assets/bxs-check-circle.svg"
+                alt="check"
+              />
+              <p class="text-xs text-green-600">VERIFIED</p>
+            </span>
+          </div>
+          <div>
+            I've tried several smartwatches before, but this one truly stands
+            out. The display is crystal clear, even in bright sunlight, and the
+            touch responsiveness is spot on. I love how easy it is to customize
+            the watch face and apps to suit my needs. The fitness tracking is
+            comprehensive and motivates me to stay active.
+          </div>
+        </div>
+        <div class="p-8 text-left bg-glass max-w-96 mx-auto md:mx-0">
+          <div class="flex items-center justify- w-full text-center mb-3">
+            <img src="../assets/p3.png" alt="p3" />
+            <h3 class="text-xl ml-14 font-semibold">Sarah Mitchell</h3>
+          </div>
+          <div class="flex gap-5 mb-4">
+            <div class="flex gap-3 items-center">
+              <span class="flex">
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+              </span>
+              <p>5.0</p>
+            </div>
+            <span
+              class="flex gap-1 items-center border border-white rounded-full p-0.5 px-1 bg-[#A1FFB6]"
+            >
+              <img
+                class="w-5"
+                src="../assets/bxs-check-circle.svg"
+                alt="check"
+              />
+              <p class="text-xs text-green-600">VERIFIED</p>
+            </span>
+          </div>
+          <div>
+            This smartwatch has quickly become an essential part of my daily
+            routine. The build quality is excellent, and it feels solid yet
+            comfortable on the wrist. I appreciate how seamlessly it integrates
+            with my phone, allowing me to receive calls, texts, and app
+            notifications right on my wrist.
+          </div>
+        </div>
+        <div class="p-8 text-left bg-glass max-w-96 mx-auto md:mx-0">
+          <div class="flex items-center justify- w-full text-center mb-3">
+            <img src="../assets/p4.png" alt="p4" />
+            <h3 class="text-xl ml-14 font-semibold">David Rodriguez</h3>
+          </div>
+          <div class="flex gap-5 mb-4">
+            <div class="flex gap-3 items-center">
+              <span class="flex">
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+              </span>
+              <p>5.0</p>
+            </div>
+            <span
+              class="flex gap-1 items-center border border-white rounded-full p-0.5 px-1 bg-[#A1FFB6]"
+            >
+              <img
+                class="w-5"
+                src="../assets/bxs-check-circle.svg"
+                alt="check"
+              />
+              <p class="text-xs text-green-600">VERIFIED</p>
+            </span>
+          </div>
+          <div>
+            I’ve never experienced anything like this VR headset. The graphics
+            are stunning, and the sense of depth is incredible—it really feels
+            like you’re inside the game or environment. The setup was
+            straightforward, and the controls are intuitive, making it easy to
+            dive right in. It’s comfortable to wear for extended periods, which
+            is great for long gaming sessions or exploring virtual worlds.
+          </div>
+        </div>
+        <div class="p-8 text-left bg-glass max-w-96 mx-auto md:mx-0">
+          <div class="flex items-center justify- w-full text-center mb-3">
+            <img src="../assets/p5.png" alt="p5" />
+            <h3 class="text-xl ml-14 font-semibold">Kevin Chen</h3>
+          </div>
+          <div class="flex gap-5 mb-4">
+            <div class="flex gap-3 items-center">
+              <span class="flex">
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+              </span>
+              <p>5.0</p>
+            </div>
+            <span
+              class="flex gap-1 items-center border border-white rounded-full p-0.5 px-1 bg-[hsl(133,50%,82%)]"
+            >
+              <img
+                class="w-5"
+                src="../assets/bxs-check-circle.svg"
+                alt="check"
+              />
+              <p class="text-xs text-green-600">VERIFIED</p>
+            </span>
+          </div>
+          <div>
+            This gaming console is an absolute powerhouse. The load times are
+            lightning fast, and the graphics are simply breathtaking. Every game
+            feels smoother and more immersive than ever before. I’m particularly
+            impressed with the new controller—it’s comfortable, responsive, and
+            the haptic feedback adds a whole new dimension to gameplay.
+          </div>
+        </div>
+        <div class="p-8 text-left bg-glass max-w-96 mx-auto md:mx-0">
+          <div class="flex items-center justify- w-full text-center mb-3">
+            <img src="../assets/p6.png" alt="p6" />
+            <h3 class="text-xl ml-14 font-semibold">Megan Thompson</h3>
+          </div>
+          <div class="flex gap-5 mb-4">
+            <div class="flex gap-3 items-center">
+              <span class="flex">
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+                <img src="../assets/bxs-star.svg" alt="star" />
+              </span>
+              <p>5.0</p>
+            </div>
+            <span
+              class="flex gap-1 items-center border border-white rounded-full p-0.5 px-1 bg-[#A1FFB6]"
+            >
+              <img
+                class="w-5"
+                src="../assets/bxs-check-circle.svg"
+                alt="check"
+              />
+              <p class="text-xs text-green-600">VERIFIED</p>
+            </span>
+          </div>
+          <div>
+            These headphones are a game-changer for anyone who values
+            high-quality audio. The sound is rich, with deep bass and clear
+            highs, making every song feel like a live performance. They’re also
+            incredibly comfortable, with soft ear cushions that don’t cause
+            fatigue even after hours of use. The wireless connectivity is
+            seamless, and the battery life is impressive—I can go days without
+            needing a recharge.
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="bg-glass m-3 "
+    >
+    <div class="flex flex-col gap-y-2 md:flex-row justify-between items-start md:items-center p-8 text-white"><div class="max-w-80">
+        <a href="#Home"
+          ><img class="mb-4 cursor-pointer" src="../assets/logo.png" alt=""
+        /></a>
+
+        <p>
+          A cutting-edge technology brand dedicated to delivering innovative and
+          high-quality products that enhance everyday life. With a focus on
+          modern design and advanced functionality, Zeetech is your go-to source
+          for the latest in tech.
+        </p>
+      </div>
+      <div>
+        <ul class="flex flex-col gap-y-1 md:gap-4 text-md text-gray-300">
+          <a class="hover:text-white" href="">About Us</a>
+          <a class="hover:text-white" href="">Contact Us</a>
+          <a class="hover:text-white" href="">Terms and Conditions</a>
+          <a class="hover:text-white" href="">Privacy Policy</a>
+          <a class="hover:text-white" href="">Shipping and Returns</a>
+        </ul>
+      </div>
+      <div class="md:border-r-2 border-gray-400 pr-20">
+        <ul class="flex flex-col gap-y-1 md:gap-4 text-md text-gray-300">
+          <a class="hover:text-white" href="">FAQs</a>
+          <a class="hover:text-white" href="">Careers</a>
+          <a class="hover:text-white" href="">Blog</a>
+          <a class="hover:text-white" href="">Customer Support</a>
+        </ul>
+      </div>
+      <div class="flex flex-col items-center gap-4 md:mr-10">
+        <p class="text-gray-400 hover:text-white">Follow Us</p>
+        <div
+          class="md:space-y-2 md:block flex gap-x-4 items-center justify-center"
+        >
+          <img
+            class="w-6 cursor-pointer"
+            src="../assets/facebook.svg"
+            alt="facebook"
+          />
+          <img
+            class="w-6 cursor-pointer"
+            src="../assets/instagram.svg"
+            alt="instagram"
+          />
+          <img
+            class="w-6 cursor-pointer"
+            src="../assets/pinterest.svg"
+            alt="pinterest"
+          />
+          <img class="w-6 cursor-pointer" src="../assets/x.svg" alt="x" />
+        </div>
+      </div></div>
+      
+      <p class="text-white font-mont text-center pb-4 ">Copyright 2024 © ZeeTech . All Right Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
